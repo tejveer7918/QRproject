@@ -11,7 +11,13 @@ TEST_DIR = "dataset/test"
 st.title("QR Code Authentication Model")
 
 # Model Evaluation Section
+st.header("🔍 Evaluating Model on Test Dataset...")
 
+st.subheader("📌 Evaluating on Original QR Codes")
+st.write("Results for original QR codes go here...")  # Placeholder
+
+st.subheader("📌 Evaluating on Fake QR Codes")
+st.write("Results for fake QR codes go here...")  # Placeholder
 
 # Display Fixed Metrics
 st.markdown("""
@@ -22,6 +28,19 @@ st.markdown("""
 - 🏆 **F1 Score:** `0.4746`
 """)
 
+# Model Loading (If Needed)
+@st.cache_resource
+def load_model():
+    model_path = "model_training/model.pth"
+    if os.path.exists(model_path):
+        model = torch.load(model_path, map_location=torch.device("cpu"))
+        model.eval()
+        return model
+    else:
+        st.error("🚨 Model file not found! Please upload 'model.pth' in 'model_training/'.")
+        return None
+
+model = load_model()
 
 # Image Preprocessing
 transform = transforms.Compose([
