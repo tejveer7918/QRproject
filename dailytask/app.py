@@ -13,7 +13,7 @@ DATASET_FILE_ID = "1YF-GiDnT0jvDRvICM8xETegtmmnFJ3dw"  # Correct dataset file ID
 
 MODEL_PATH = "QR_Authentication_ResNet50.keras"
 DATASET_ZIP_PATH = "dataset.zip"
-DATASET_EXTRACT_PATH = "test"
+DATASET_EXTRACT_PATH = "dataset"
 
 # Download Model if not exists
 if not os.path.exists(MODEL_PATH):
