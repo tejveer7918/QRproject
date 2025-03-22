@@ -11,13 +11,7 @@ TEST_DIR = "dataset/test"
 st.title("QR Code Authentication Model")
 
 # Model Evaluation Section
-st.header("🔍 Evaluating Model on Test Dataset...")
 
-st.subheader("📌 Evaluating on Original QR Codes")
-st.write("Results for original QR codes go here...")  # Placeholder
-
-st.subheader("📌 Evaluating on Fake QR Codes")
-st.write("Results for fake QR codes go here...")  # Placeholder
 
 # Display Fixed Metrics
 st.markdown("""
@@ -37,7 +31,7 @@ def load_model():
         model.eval()
         return model
     else:
-        st.error("🚨 Model file not found! Please upload 'model.pth' in 'model_training/'.")
+        st.error("...")
         return None
 
 model = load_model()
