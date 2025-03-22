@@ -22,19 +22,6 @@ st.markdown("""
 - 🏆 **F1 Score:** `0.4746`
 """)
 
-# Model Loading (If Needed)
-@st.cache_resource
-def load_model():
-    model_path = "model_training/model.pth"
-    if os.path.exists(model_path):
-        model = torch.load(model_path, map_location=torch.device("cpu"))
-        model.eval()
-        return model
-    else:
-        st.error("...")
-        return None
-
-model = load_model()
 
 # Image Preprocessing
 transform = transforms.Compose([
