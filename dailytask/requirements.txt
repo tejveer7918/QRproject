@@ -1,11 +1,9 @@
 streamlit
-tensorflow
-keras
+torch
+torchvision
 numpy
 pandas
+Pillow
+scikit-learn
 matplotlib
 seaborn
-opencv-python
-scikit-learn
-gdown
-torch
